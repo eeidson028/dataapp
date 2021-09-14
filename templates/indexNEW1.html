@@ -1,0 +1,393 @@
+<head>
+
+  <style>
+    h1 {display: inline-block; font-size: 35px;}
+    div.menu {float: right;}
+    ul {display: inline-block; font-size: 24px; margin-top: 35px;}
+    li {display: inline-block; margin-right: 30px;}
+    i {color: #4285F4; margin-left: 15px; margin-right: 15px;}
+    .header {border-bottom-style: solid; border-color: grey;}
+    .container {display: grid; grid-template-columns: repeat(12, 1fr);}
+    table {margin: 20px; width: 90%; border-collapse: collapse;}
+    table, th, td {border: 1px solid black; background-color: 'transparent';}
+    th, td {padding: 10px; text-align: center;}
+    th {font-size: 20px;}
+    #pro {grid-column: 1 / 4;}  
+    #acc  {grid-column: 4 / 7;}
+    #fut {grid-column: 7 / 10;}
+    #cus {grid-column: 10 / 13;}
+    #web {grid-column: 4 / 7;}
+    #debequ {grid-column: 1 / 4;}
+    #fin {grid-column: 7 / 10;}
+    #hrcus  {grid-column: 10 / 13;}
+
+  </style>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+   crossorigin="anonymous">
+  <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+
+
+
+</head>
+
+<body>
+  
+  <div class="header">
+  <h1><i class="fas fa-bars"></i> DataBoard </h1>
+  <div class="menu">
+    <ul>
+      <li>Home</li>
+      <li>Financial</li>
+      <li>Future</li>
+      <li>Customer</li>
+      <li>Market</li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="container">
+    <div id="pro"> </div>    
+    <div id="acc"> </div>
+    <div id="fut"> </div>
+    <div id="cus"> </div>
+  </div>
+
+
+  <div class="container" style="margin-top: 50px">
+    <div id="debequ"> </div>
+    <div id="web">
+      <table>
+        <tr>
+          <th></th>
+          <th style="color: 4285F4">Facebook</th>
+          <th style="color: DB4437">Website</th>
+          <th style="color: 0F9D58">Email List</th>
+        </tr>
+      <tr>
+        <th>Leads</th>
+        <td>1,240</td>
+	<td>112</td>
+	<td>325</td>
+      </tr>
+      <tr>
+        <th>Prospects</th>
+        <td>460</td>
+	<td>33</td>
+	<td>215</td>
+       </tr>
+       <tr>
+         <th>Opportunites</th>
+         <td>78</td>
+	 <td>12</td>
+	 <td>45</td>
+       </tr>
+       <tr>
+	 <th>Closed</th>
+	 <td>23</td>
+	 <td>7</td>
+	 <td>39</td>
+       </tr>
+       <tr>
+         <th>Conversion</th>
+	 <td>27%</td>
+	 <td>76%</td>
+         <td>88%</td>
+        </tr>
+        <tr>
+	  <th>Churn Rate</th>
+	  <td>22%</td>
+	  <td>17%</td>
+	  <td>4%</td>
+        </tr>
+      </table>    
+    </div>
+
+    <div id='fin'>
+     <table>
+       <tr> 
+         <th style="color:0F9D58">Finance</th>
+	</tr>
+       <tr>
+	 <th>Cash Balance: $18,340</th>
+       </tr>
+       <tr>
+	 <th>Avg. Monthly Costs: $4,250</th>
+       </tr>
+	<tr>
+	 <th>Avg. Monthly Revenue: $650</th>
+	</tr>
+	<tr>
+	 <th>Accounts Receivable: $1,250</th>
+       </tr>
+	 <th>Accounts Payable: $3,260</th>
+	</tr>
+	
+	</table>
+    </div>
+
+
+  <div id='hrcus'>
+     <table>
+       <tr>
+         <th style="color: DB4437">HR / Customer</th>
+       </tr>
+       <tr>
+         <th>HR Head Count: 6</th>
+       </tr>
+       <tr>
+         <th>Revenue/Employee: $19,250</th>
+       </tr>
+        <tr>
+         <th>Costs/Employee: $26,130</th>
+        <tr>
+         <th>LTV:CAC Ratio: 1.13</th>
+         </tr>
+       </tr>
+         <th>Avg. MRR:  $4</th>
+        </tr>
+      </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+<script>
+
+var trace1 = {
+  x: ['2021-1','2021-2','2021-3','2021-4','2021-5',
+    '2021-6','2021-7','2021-8','2021-9'],
+  y: [10, 15, 13, 17, 20, 21, 18,22, 24],
+  name: "Revenue",
+  type: 'scatter',
+  line: {color: '0F9D58', width: 4}
+};
+
+var trace2 = {
+  x: ['2021-1','2021-2','2021-3','2021-4','2021-5',
+    '2021-6','2021-7','2021-8','2021-9'],
+  y: [16, 5, 11, 9, 17, 12, 14, 16, 20],
+  name: "Costs",
+  type: 'scatter',
+  line: {color: 'DB4437', width: 4}
+};
+
+var data = [trace1, trace2];
+var layout = {title: "Year-to-Date Margin: + $78,230",
+             xaxis: {showgrid: false, showline: true},
+             yaxis: {showgrid: false, showline: true}  };
+
+Plotly.newPlot('pro', data, layout);
+
+
+
+
+
+
+
+
+var trace1 = {
+  x: ['2021-1','2021-2','2021-3','2021-4','2021-5',
+    '2021-6','2021-7','2021-8','2021-9'],
+  y: [1, 3, 5, 7, 8,8,9,11,12],
+  name: 'Product',
+  type: 'bar',
+  marker: {color: 'F4B400'}
+};
+
+var trace2 = {
+  x: ['2021-1','2021-2','2021-3','2021-4','2021-5',
+    '2021-6','2021-7','2021-8','2021-9'],
+  y: [1,2, 4, 5, 7, 9,9,9,10],
+  name: 'Service',
+  type: 'bar',
+  marker: {color: '4285F4'}
+};
+
+var data = [trace1,trace2];
+var layout = {barmode: 'stack',title: "Year-to-Date Total Accounts: 123",
+             xaxis: {showgrid: false, showline: true},
+             yaxis: {showgrid: false, showline: true}  };
+
+Plotly.newPlot('acc', data, layout);
+
+
+
+
+
+
+
+
+
+var profits = {
+  x: ['2021-1','2021-2','2021-3','2021-4','2021-5',
+    '2021-6','2021-7','2021-8','2021-9','2021-10',
+    '2021-11','2021-12'],
+  y: [2,3,7,6,12,15,11,13], name: "Margin",
+  mode: 'markers',
+  type: 'scatter',
+  marker: {size: 8},
+};
+
+var prediction = {
+  x: ['2021-1','2021-2','2021-3','2021-4','2021-5',
+    '2021-6','2021-7','2021-8','2021-9','2021-10',
+    '2021-11','2021-12'],
+  y: [2,4,5,8,11,12,13,16,17,20,21,24], name: "Prediction",
+  mode: 'lines',
+  type: 'scatter',
+  line: {color: 'F4B400',width: 5}
+};
+
+
+var data = [profits, prediction];
+var layout = {title: "Annual Profits Prediction: + $97,340"}
+
+Plotly.newPlot('fut', data, layout);
+
+
+
+
+
+
+
+
+
+var data = [
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 6.3,
+    delta: { reference: 6.8 },
+    domain: { x: [0.25, 1], y: [0.08, 0.25] },
+    title: { text: "Survey" },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 10] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 6.3
+      },
+      steps: [
+        { range: [0, 5], color: "DB4437" },
+        {
+          range: [5, 10],
+          color: "0F9D58"
+        }
+      ],
+      bar: { color: "black" }
+    }
+  },
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 17,
+    delta: { reference: 12 },
+    domain: { x: [0.25, 1], y: [0.4, 0.6] },
+    title: { text: "Convert %" },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 100] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 17
+      },
+      steps: [
+        { range: [0, 50], color: "DB4437" },
+        { range: [50, 100], color: "0F9D58" }
+      ],
+      bar: { color: "black" }
+    }
+  },
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 6.2,
+    delta: { reference: 5.9 },
+    domain: { x: [0.25, 1], y: [0.7, 0.9] },
+    title: { text: "N.P.S." },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 10] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 6.2
+      },
+      steps: [
+        { range: [0, 5], color: "DB4437" },
+        { range: [5, 10], color: "0F9D58" }
+      ],
+      bar: { color: "black" }
+    }
+  }
+];
+
+var layout = {title: "Customer Evaluation Score: 6.2",
+  width: 450, height: 400,
+  margin: { t: 100, r: 25, l: 10, b: 0 }
+};
+Plotly.newPlot('cus', data, layout);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var trace1 = {
+  x: ['2021-1','2021-3','2021-5','2021-7','2021-9'],
+  y: [1, 3, 2, 5, 4],
+  name: 'Debt',
+  type: 'bar',
+  marker: {color: 'DB4437'}
+};
+
+var trace2 = {
+  x: ['2021-1','2021-3','2021-5','2021-7','2021-9'],
+  y: [2, 3, 3, 4, 3],
+  name: 'Equity',
+  type: 'bar',
+  marker: {color: '4285F4'}
+};
+
+var data = [trace1, trace2];
+
+var layout = {title: "Debt-to-Equity Ratio: 1.12",barmode: 'group',
+             margin: {b:40, t:40}    };
+
+Plotly.newPlot('debequ', data, layout);
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+

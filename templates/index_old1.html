@@ -1,0 +1,237 @@
+<head>
+  <style>
+
+   * {box-sizing:border-box}
+   .header {text-align: justify;background-color: rgb(68, 68, 68);width: 100%;
+            text-justify: distribute-all-lines;height: 75px;}
+   .header:after{content: '';display: inline-block;width: 100%;height: 0;
+    font-size:0;line-height:0;}
+   h1 {display:inline-block;margin-top: 11px;margin-left: 15px;font-size:
+       35px;color: rgb(237,237,237);font-family: Times;}
+   .nav {display: inline-block;vertical-align: baseline;}
+   a {font-size:20px;color: rgb(237,237,237);padding-right: 20px;font-family: Verdana;}
+   #navicon {margin-right: 30px;}
+   #pmi {color:green;padding-left:10px;}
+   h2 {;}
+
+    .row::after {content: "";clear: both;display: table;}
+    [class*="col-"] {float: left;padding: 10px;border: 1px solid black;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    @media only screen and (max-width: 768px) {
+    [class*="col-"] {width: 100%;}}
+      
+ </style>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+  
+ <div class='header'>
+  <h1><i id='navicon' class="fas fa-bars fa-xs"></i>Data Analytics</h1>
+  <div class='nav'>
+    <a>KPIs</a>
+    <a>Revenue</a>
+    <a>Costs</a>
+    <a>Future</a>
+    <a>Customers</a>
+    <a>Market</a>
+  </div>
+  </div>
+  
+  <div class='row'>
+    <div class='col-3'>
+      <h2>Weekly Profits: <i class=
+        "far fa-caret-square-up fa-lg" style='color:green;margin-left:50px'></i>
+      <span>$1,350</span></h2>
+      <div id="promar""></div>
+      <p>Gross Profit Margin: 64%</p>
+      <p>Operating Profit Margin: 18%</p>
+      </div>
+
+    <div class='col-3'>
+      <h2>Sales Growth Rate: <i style='color:green' 
+	class="fa fa-plus-circle" aria-hidden="true"></i>
+      <span>13%</span></h2>
+      <div id="revgro"></div>
+      <p>Sales Revenue per Employee: $1,340</p>
+      <p>Return on Investments: 14%</p>
+    </div>
+
+    <div class="col-3">
+      <h2>Net Cash Flow: <i class=
+	"fa fa-minus-circle" aria-hidden="true" style='color:red;'></i>
+	$1,470</h2>
+      <div id='casflo'></div>
+	<p>Accounts Receivable: $18,100</p>
+	<p>Accounts Payable: $13,400</p>
+    </div>
+
+     <div class="col-3">
+      <h2>Ratios:</h2>
+      <div id='debequ'></div>
+    </div>
+
+  </div>
+
+
+
+
+
+<script>
+	REVGRO = document.getElementById('revgro');
+	Plotly.newPlot( REVGRO, [{
+	x: [1,2,3,4,5],
+	y: [1, 2, 4,16,12],line: {
+    color: 'rgb(68, 68, 68)',
+    width: 3
+  } }],
+        {height: 200,width: 350, margin: {l:15,r:0,b:15,t: 0}}
+        ,{staticPlot:true} );
+
+	
+  var data = [{values: [23, 77],labels: ['Profits', 'Costs'],
+		textinfo: "label+percent", textposition: "inside",
+		type: 'pie', marker: {colors: ['rgb(68, 68, 68)',
+		'#4056a1']}      }];
+  var layout = {height: 200,width: 300, showlegend:false,
+		margin: {l:0,r:0,b:0,t: 0}};
+
+Plotly.newPlot('promar', data, layout,{staticPlot:true});
+
+
+var data = [
+  {
+    type: 'bar',
+    x: ['2016','2017','2018'],
+    y: [500,600,700],
+    base: [-500,-600,-700],
+    hovertemplate: '%{base}',
+    marker: {
+      color: '#d90000'
+    },
+    name: 'Outflow'
+  },
+  {
+    type: 'bar',
+    x: ['2016','2017','2018'],
+    y: [300,400,700],
+    base: 0,
+    marker: {
+      color: 'green'
+    },
+    name: 'Inflow'
+  }]
+
+Plotly.newPlot('casflo', data,{showlegend:true,
+	height: 200,width: 350, margin:{t:0,l:0,r:0,b:17}
+	});
+
+
+
+
+var data = [
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 1.03,
+    delta: { reference: 0.99 },
+    domain: { x: [0.25, 1], y: [0.08, 0.25] },
+    title: { text: "Quick" },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 2] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 1.03
+      },
+      steps: [
+        { range: [0, 1.0], color: "#d90000" },
+        {
+          range: [1, 2],
+          color: "green"
+        }
+      ],
+      bar: { color: "black" }
+    }
+  },
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 1.22,
+    delta: { reference: 1.2},
+    domain: { x: [0.25, 1], y: [0.4, 0.6] },
+    title: { text: "Current" },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 2] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 1.22
+      },
+      steps: [
+        { range: [0, 1], color: "#d90000" },
+        { range: [1, 2], color: "green" }
+      ],
+      bar: { color: "black" }
+    }
+  },
+{
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 1.34,
+    delta: { reference: 1.39 },
+    domain: { x: [0.25, 1], y: [0.7, 0.9] },
+    title: { text: "Debt:Equity" },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 2] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 1.34
+      },
+      steps: [
+        { range: [0, 1], color: "#d90000" },
+        { range: [1, 2], color: "green" }
+      ],
+      bar: { color: "black" }
+    }
+  }
+];
+
+var layout = {
+  width: 400, height: 285,
+  margin: { t: 0, r: 0, l: 40, b:0 }
+};
+Plotly.newPlot('debequ', data, layout);
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>	
+
