@@ -1,4 +1,4 @@
-The folders and files for this github project represent the underlying code that allows the Data Ananlytics App to function.  Click on the various files and directories to explore the code.
+The directories and files for this github project represent the underlying code that allows the Data Ananlytics App to function.  Click on the various files and directories to explore the code.
 This data analytics app is run through Flask, a web application framework that functions through the programming language Python
 Below are descriptions of the various files & directories:<br>
 <br>
