@@ -10,10 +10,6 @@ def hello_world():
 def financial():
     return render_template('financial.html')
 
-@app.route("/future")
-def future():
-    return render_template('future.html')
-
 @app.route("/customer")
 def customer():
     return render_template('customer.html')
