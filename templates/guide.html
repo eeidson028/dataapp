@@ -1,6 +1,27 @@
 <head>
 
   <style>
+
+    * {box-sizing: border-box;}
+    .row::after {content: "";clear: both;display: table;}
+    [class*="col-"] {float: left; padding: 0px;}
+    [class*="col-"] {width: 100%;}
+
+    @media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
+    .col-4 > p {font-size: 20px; margin-left: 50px;}
     h1 {display: inline-block; font-size: 35px;}
     div.menu {float: right;}
     li {display: inline-block;  margin-right: 30px;}    
@@ -16,11 +37,10 @@
     th, td {padding: 10px; text-align: center;}
     th {font-size: 20px;}
     td {text-align: left; font-size: 18px;}
-    #ben > p {font-size: 22px;}
-    #fea > p {font-size: 22px;}
 
   </style>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
    crossorigin="anonymous">
   <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
@@ -45,9 +65,9 @@
   </div>
   </div>
 
-  <div class="container">
+  <div class="row" style="margin-top: 25px;">
 
-  <div id='keyter' style="width: 33vw;margin-left: 25px;margin-top: 50px;">
+  <div id='keyter' class="col-4">
   <table>
   <tr><th style="color:0F9D58;">Key Terms</th>
       <th style="color:4285F4;">Definition</th><th style="color: DB4437;">
@@ -63,8 +83,8 @@
   </table>
   </div>
 
-  <div id='ben' style="margin-left: 50px;width: 33vw;margin-top: 50px;">
-  <h2 style="margin-bottom: 40px; margin-left: 130px;">Data Analytics Benefits</h2>
+  <div id='ben' class="col-4">
+  <h2 style="margin-bottom: 40px; margin-left: 200px;">Data Analytics Benefits</h2>
   <p><i style="color: 4285F4;" class="fas fa-crosshairs fa-lg"></i>
          Increased targeted marketing through customer insights</p>
   <p><i style="color: 4285F4;" class="fas fa-dollar-sign fa-lg"></i>
@@ -82,8 +102,8 @@ Increased automation that decreases labor-intensive tasks</p>
   
   </div>
 
-  <div id='fea' style="margin-left: 0px;width: 33vw;margin-top: 50px;">
-  <h2 style="margin-bottom: 40px; margin-left: 100px;">Technical Features</h2>
+  <div id='fea' class="col-4">
+  <h2 style="margin-bottom: 40px; margin-left: 175px;">Technical Features</h2>
   <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
          Python for data collection & analysis</p>
   <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
@@ -102,10 +122,11 @@ Increased automation that decreases labor-intensive tasks</p>
 
   </div>
 
-  <div style="margin-top: 50px;">
-  <h2 style="margin-left: 125px; color: DB4437;">About</h2>
-   <p style="margin-left: 150px;text-indent:50px;margin-right: 150px;
-       font-size: 24px;text-align: justify; text-justify: inter-word;
+  <div class="row">
+  <div class="col-12" style="padding: 25px;">
+  <h2 style="color: DB4437;">About</h2>
+   <p style="text-indent:50px;
+       font-size: 22px;text-align: justify; text-justify: inter-word;
          line-height: 1.5;">
        Your business needs to be using
        data as a competitive edge.  Financial, customer, transactional, market
@@ -128,6 +149,8 @@ Increased automation that decreases labor-intensive tasks</p>
        
          </p>
     </div>
+
+  </div>
 
 
   

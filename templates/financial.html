@@ -1,6 +1,27 @@
 <head>
 
   <style>
+
+    * {box-sizing: border-box;}
+    .row::after {content: "";clear: both;display: table;}
+    [class*="col-"] {float: left; padding: 0px;}
+    [class*="col-"] {width: 100%;}
+
+    @media only screen and (min-width: 1000px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
+
     h1 {display: inline-block; font-size: 35px;}
     div.menu {float: right;}
     ul {display: inline-block; font-size: 24px; margin-top: 35px;}
@@ -17,14 +38,6 @@
     th, td {padding: 15px; text-align: center;}
     th {font-size: 23px;}
     td {font-size: 20px;}
-    #mar {grid-column: 1 / 4;}  
-    #rat  {grid-column: 4 / 7;}
-    #fin {grid-column: 7 / 10;}
-    #hrcus {grid-column: 10 / 13;}
-    #roi {grid-column: 1 / 4;}
-    #worcap  {grid-column: 4 / 7;}
-    #salgro  {grid-column: 7 / 10;}
-    #debequ  {grid-column: 10 / 13;}
 
   </style>
 
@@ -51,11 +64,11 @@
   </div>
 
 
-  <div class="container">
-    <div id="mar"></div>
-    <div id="rat"></div>
+  <div class="row">
+    <div id="mar" class="col-3"></div>
+    <div id="rat" class="col-3"></div>
 
-     <div id='fin'>
+     <div id='fin' class="col-3">
      <table>
        <tr>
          <th style="color:0F9D58">Cash Flow</th>
@@ -79,7 +92,7 @@
     </div>
 
 
-  <div id='hrcus'>
+  <div id='hrcus' class="col-3">
      <table>
        <tr>
          <th style="color: DB4437">HR / Customer</th>
@@ -105,12 +118,12 @@
 
 
 
-  <div class="container">
+  <div class="row">
 
-    <div id="roi"> </div>
-    <div id="worcap"> </div>
-    <div id="salgro"> </div>
-    <div id="debequ"> </div>
+    <div id="roi" class="col-3"> </div>
+    <div id="worcap" class="col-3"> </div>
+    <div id="salgro" class="col-3"> </div>
+    <div id="debequ" class="col-3"> </div>
 
   </div>
 
