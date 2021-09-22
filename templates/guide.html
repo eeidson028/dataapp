@@ -1,0 +1,165 @@
+<head>
+
+  <style>
+
+    * {box-sizing: border-box;}
+    .row::after {content: "";clear: both;display: table;}
+    [class*="col-"] {float: left; padding: 0px;}
+    [class*="col-"] {width: 100%;}
+
+    @media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
+    .col-4 > p {font-size: 16px; margin-left: 15px; margin-bottom: 20px;}
+    h1 {display: inline-block; font-size: 25px;}
+    div.menu {float: right;}
+    li {display: inline-block;  margin-right: 30px;}    
+    ul {display: inline-block; font-size: 20px; margin-top: 20px;}
+
+    i {color: #4285F4; margin-left: 15px; margin-right: 15px;}
+    a  {text-decoration: none;}
+    a:visited {text-decoration: none;color: black;}
+    .header {border-bottom-style: solid; border-color: grey;}
+    .container {display: grid; grid-template-columns: repeat(12, 1fr);}
+    table {margin: 20px; border-collapse: collapse;}
+    table, th, td {border: 1px solid black; background-color: 'transparent';}
+    th, td {padding: 10px; text-align: center;}
+    th {font-size: 16px;}
+    td {text-align: left; font-size: 14px; padding: 10px;}
+
+  </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+   crossorigin="anonymous">
+  <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel=
+	  "stylesheet">
+
+
+
+</head>
+
+<body>
+  
+  <div class="header">
+  <h1><i class="fas fa-bars"></i> Data Analytics </h1>
+  <div class="menu">
+    <ul>
+      <li><a href="/">KPI</a></li>
+      <li><a href="/financial">Finance</a></li>
+      <li><a href="customer">Customer</a></li>
+      <li style="border-bottom: 3px solid blue;"><a href="/guide">Guide</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="row" style="margin-top: 25px;">
+
+  <div id='keyter' class="col-4">
+  <table>
+  <tr><th style="color:0F9D58;">Key Terms</th>
+      <th style="color:4285F4;">Definition</th><th style="color: DB4437;">
+          Target</th></tr>
+  <tr><td>N.P.S.</td><td>Net Promoter Score</td><td>7.0</td></tr>
+  <tr><td>Net Profit Margin</td><td>(revenue - cost) / revenue</td><td>12.5%</td></tr>
+  <tr><td>Gross Profit Margin</td><td>(revenue - cost of goods sold) / revenue</td><td>30%</td></tr>
+  <tr><td>Operating Profit Margin</td><td>operating income / revenue</td><td>8%</td></tr>
+  <tr><td>Current Ratio</td><td> assets / liabilities</td><td>2.0</td></tr>
+  <tr><td>Quick Ratio</td><td>( assets - inventory) / liabilities</td><td>1.0</td></tr>
+  <tr><td>LTV:CAC</td><td>customer lifetime value : acquisition costs</td><td>3:1</td></tr>
+  <tr><td>MRR</td><td>Monthly Recurring Revenue</td><td>35%+</td></tr>
+  </table>
+  </div>
+
+  <div id='ben' class="col-4">
+  <h2 style="margin-bottom: 40px; margin-left: 125px;">Data Analytics Benefits</h2>
+  <p><i style="color: 4285F4;" class="fas fa-crosshairs fa-lg"></i>
+         Increased targeted marketing through customer insights</p>
+  <p><i style="color: 4285F4;" class="fas fa-dollar-sign fa-lg"></i>
+      Increased operational efficiency through internal business analytics</p>
+  <p><i style="color: 4285F4;" class="fas fa-warehouse fa-lg"></i>
+    Increased supply-chain management through real-time analytics</p>
+  <p><i class="fas fa-chart-line fa-lg"></i>
+   Predictive capabilities through machine learning and AI</p>
+  <p><i style="color: 4285F4;" class="fas fa-handshake fa-lg"></i>
+   Increased analytical and transaction processing insights</p>
+  <p><i style="color: 4285F4;" class="fas fa-globe-americas fa-lg"></i>
+Market analytics to understand one's enviroment and competitiors</p>
+  <p><i class="fas fa-robot fa-lg"></i>
+Increased automation that decreases labor-intensive tasks</p> 
+  
+  </div>
+
+  <div id='fea' class="col-4">
+  <h2 style="margin-bottom: 40px; margin-left: 125px;">Technical Features</h2>
+  <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
+         Python for data collection & analysis</p>
+  <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
+      SQL for database storage & analysis</p>
+  <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
+    Machine Learning for predition and analysis</p>
+  <p><i style="color: 0F9D58;"class="fas fa-cog fa-lg"></i>
+   HTML, CSS, & JavaScript for data visualization</p>
+  <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
+   Flask for web application development</p>
+  <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
+    Apache Spark for big data analytics</p>
+  <p><i style="color: 0F9D58;" class="fas fa-cog fa-lg"></i>
+  Web-Scraping/Social-Media APIs for customer data</p>
+  </div>
+
+  </div>
+
+  <div class="row">
+  <div class="col-12" style="padding: 25px;">
+  <h2 style="color: DB4437;">About</h2>
+   <p style="text-indent:50px;
+       font-size: 16px;text-align: justify; text-justify: inter-word;
+         line-height: 2.0;">
+       Your business needs to be using
+       data as a competitive edge.  Financial, customer, transactional, market
+       and other data sources can be leveraged
+       to increase profits  as high as  35% annualy.
+       Data can reveal insights such as seasonal customer purchasing patterns, 
+       specific customer demographic information, or even profit margin 
+       predictions as accurate as 90-95%. While the metrics used in this
+       web application are important, the real power of data analytics lies
+       within machine learning, a sub-branch of Artifical Intelligence.  With
+       machine learning, you can use advanced statistical methods to predict
+       numbers (regression) or labels (classification).  Machine Learning
+       examples include predicting housing prices through the K-Nearest-Neighbors
+       algorithm, calculating the probalility that a person will pay back their
+       loan through logistic classification, or identifying the biggest
+       factors causing a company's rising costs through a mutiple linear
+       regression model. By utilizing your data properly, your company will
+       be using the same competitive edge as industry leaders everywhere 
+       that include  Google, Facebook, Amazon, Netflix, and Apple.
+       
+         </p>
+    </div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+</body>
+
+
