@@ -1,0 +1,358 @@
+<head>
+
+  <style>
+
+    * {box-sizing: border-box;}
+    .row::after {content: "";clear: both;display: table;}
+    [class*="col-"] {float: left; padding: 0px;}
+    [class*="col-"] {width: 100%;}
+
+    @media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
+
+    h1 {display: inline-block; font-size: 25px;}
+    div.menu {float: right;}
+    ul {display: inline-block; font-size: 20px; margin-top: 20px;}
+    li {display: inline-block; margin-right: 30px;}
+    i {color: #4285F4; margin-left: 15px; margin-right: 15px;}
+    a  {text-decoration: none;}
+    a:visited {text-decoration: none;color: black;}
+    .header {border-bottom-style: solid; border-color: grey;}
+    .container {display: grid; grid-template-columns: repeat(12, 1fr);}
+    table {margin: 0px; border-collapse: collapse;}
+    table, th, td {border: 1px solid black; background-color: 'transparent';}
+    th, td {padding: 10px; text-align: center;}
+    th {font-size: 16px;}
+    td {font-size: 14px;}
+
+
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+   crossorigin="anonymous">
+  <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel=
+	  "stylesheet">
+
+
+
+</head>
+
+<body>
+  
+  <div class="header">
+  <h1><i class="fas fa-bars"></i> Data Analytics</h1>
+  <div class="menu">
+    <ul>
+      <li><a href="/">KPI</a></li>
+      <li><a href="/financial">Finance</a></li>
+      <li style="border-bottom: 3px solid blue;">
+      <a href="customer">Customer</a></li>
+      <li><a href="/guide">Guide</a></li>
+    </ul>
+  </div>
+  </div>
+
+
+
+
+
+  <div class="row" style="">
+  
+    <div id="cusdem"  class="col-4"> </div>
+ 
+    <div id="sou" class="col-3" style="margin-top: 10px;"> </div>
+
+    <div id="tra" class="col-5">
+      <table style="margin-top: 70px;margin-left: 0px;">
+	<tr><td></td><th><i class="fab fa-facebook-square"></i>Facebook</th><th>
+          <i class="fab fa-youtube" style="color:DB4437"></i>YouTube</th>
+	  <th><i class="fab fa-twitter-square"></i>Twitter</th>
+	  <th><i class="fas fa-blog"></i>Blog</th>  </tr>
+	<tr><th>Total Followers</th><td>1,630</td><td>314</td>
+	  <td>134</td>
+	  <td>34</td>   </tr>
+	<tr><th>Avg. Views/Post</th><td>23</td><td>73</td>
+	  <td>27</td> <td>6</td>   </tr>
+	<tr><th>Avg. Likes/Post</th><td>66</td><td>36</td>
+	   <td>14</td> <td>2.4</td>  </tr>
+	<tr><th>Avg. Shares/Post</th><td>24</td><td>17</td>
+          <td>3</td> <td>1.2</td>  </tr>
+	<tr> <th>Avg. Comments/Post</th><td>11</td> <td>13</td> 
+	    <td>19</td> <td>4</td>  </tr>
+	<tr><th>Click-Through-Rate</th><td>7%</td><td>4%</td>
+	  <td>13%</td> <td>26%</td>  </tr>
+      </table>
+    </div>
+
+  </div>
+
+
+  <div class="row" style="margin-top: 0px;"> 
+
+
+    <div id="cusrev" class="col-4" style="margin-left: 0px;"> </div>
+
+    <div id="rec" class="col-4">
+      <table style="margin-left: 15px; margin-top: 15px;">
+	<caption style="font-size: 16px;font-family: 'Times New Roman';
+           margin-bottom: 25px;">Recent Customers</caption>
+        <tr><td></td><th>type</th><th>
+          amount</th>
+          <th>date</th>
+          <th>contact</th>  </tr>
+        <tr><th>John Marston</th><td>subscription</td><td>$60</td>
+          <td>9/21/21</td>
+          <td>john128@gmail.com</td>   </tr>
+        <tr><th>Sarah Williams</th><td>online prduct</td><td>$73</td>
+          <td>9/21/21</td> <td>swilliams@gmail.com</td>   </tr>
+        <tr><th>Taylor Pitman</th><td>sales</td><td>$36</td>
+           <td>9/20/21</td> <td>tpitman@pearson.com</td>  </tr>
+        <tr><th>GHT Manufacturing</th><td>online product</td><td>$430</td>
+          <td>9/19/21</td> <td>ben@ghtmanu.com</td>  </tr>
+        <tr> <th>Peter Blackman</th><td>service</td> <td>$230</td>
+            <td>9/15/21</td> <td>pblackman@gmail.com</td>  </tr>
+        <tr><th>Turner Reality</th><td>service</td><td>$340</td>
+          <td>9/13/21</td> <td>rick@turnerreality.com</td>  </tr>
+      </table>
+    </div>
+
+
+    <div id="loc" class="col-4" style="margin-left: 0px;"> </div>
+
+  </div>
+  
+
+  </div>
+
+
+  <script>
+
+
+var trace1 = {
+  x: ['race','gender','income','age','education'],
+  y: [65,0,0,0,0,],
+  name: 'caucasian',
+  type: 'bar',
+  marker: {color: '00008b'}
+};
+
+var trace2 = {
+  x: ['race','gender','income','age','education'],
+  y: [15,0,0,0,0],
+  name: 'black',
+  type: 'bar',
+  marker: {color: '4285F4'}
+};
+var trace3 = {
+  x: ['race','gender','income','age','education'],
+  y: [10,0,0,0,0],
+  name: 'hispanic',
+  type: 'bar',
+  marker: {color: '00008b'}
+};
+var trace4 = {
+  x: ['race','gender','income','age','education'],
+  y: [10,0,,0,0,0],
+  name: 'other',
+  type: 'bar',
+  marker: {color: '4285F4'}
+};
+var trace5 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,60,0,0,0,],
+  name: 'male',
+  type: 'bar',
+  marker: {color: '3cb371'}
+};
+
+var trace6 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,40,0,0,0],
+  name: 'female',
+  type: 'bar',
+  marker: {color: '006400'}
+};
+var trace7 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,15,0,0],
+  name: '0-50k',
+  type: 'bar',
+  marker: {color: '8b0000'}
+};
+var trace8 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,60,0,0,],
+  name: '50-100k',
+  type: 'bar',
+  marker: {color: 'ff4040'}
+};
+
+var trace9 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,25,0,0],
+  name: '100k+',
+  type: 'bar',
+  marker: {color: '8b0000'}
+};
+var trace10 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,0,10,0],
+  name: '0-18',
+  type: 'bar',
+  marker: {color: '9370db'}
+};
+var trace11 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,0,70,0,],
+  name: '18-65',
+  type: 'bar',
+  marker: {color: '4b0082'}
+};
+
+var trace12 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,0,20,0],
+  name: '65+',
+  type: 'bar',
+  marker: {color: '9370db'}
+};
+var trace13 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,0,0,25],
+  name: 'high school',
+  type: 'bar',
+  marker: {color: '36454f'}
+};
+var trace14 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,0,0,50],
+  name: 'college',
+  type: 'bar',
+  marker: {color: 'a9a9a9'}
+};
+
+var trace15 = {
+  x: ['race','gender','income','age','education'],
+  y: [0,0,0,0,25],
+  name: 'post-grad',
+  type: 'bar',
+  marker: {color: '36454f'}
+};
+
+
+var data = [trace1,trace2, trace3,trace4,trace5,trace6,trace7,trace8,trace9
+            ,trace10,trace11,trace12,trace13,trace14,trace15];
+var layout = {barmode: 'stack',title: "Customer Demographics (%)",showlegend: false,
+             font: {size: 12, family: "Times New Roman"},
+             xaxis: {showgrid: false, showline: true },
+             yaxis: {showgrid: false, showline: true,
+                autorange: true,
+    range: [0, 100] }  };
+
+Plotly.newPlot('cusdem', data, layout);
+
+
+
+
+
+
+
+
+
+
+    var data = [{
+  type: "pie",
+  values: [20, 30, 40, 40, 40,50],
+  labels: ["Social Media", "Blog", "Pay-Per-Click", "Affiliate Marketing",
+           "Email Campagin", "Referral"],
+  textinfo: "label+percent",
+  textposition: "outside",
+  automargin: true,
+  marker: {colors: ['4285F4','DB4437','F4B400','0F9D58','6A0DAD','C0C0C0']}
+}]
+
+var layout = {title: "Customer Sources",
+  font: {size: 12, family: "Times New Roman"},
+  height: 400,
+  width: 400,
+  margin: {"t": 75, "b": 0, "l": 0, "r": 0},
+  showlegend: false
+  }
+
+Plotly.newPlot('sou', data, layout)
+
+
+
+
+
+
+
+var trace1 = {
+  x: ['Mecklenburg','Cabarrus','Union','Gaston','Lincoln',
+    'York','25-50 miles','50-100 miles','100+ miles'],
+  y: [150, 120, 140, 160, 90, 100, 80, 50, 40],
+  name: 'Sales',
+  type: 'bar',
+  marker: {color: ['F4B400', '4285F4','DB4437','0F9D58','C0C0C0',
+    '6A0DAD','F4B400','4285F4','DB4437']}
+  };
+
+  var data = [trace1];
+  var layout = {title: "Customer Location (county or distance)", height: 400,
+             font: {size: 12, family: "Times New Roman"},
+             xaxis: {showgrid: false, showline: true},
+             yaxis: {showgrid: false, showline: true}  };
+
+Plotly.newPlot('loc', data, layout);
+
+
+
+
+
+
+
+var trace1 = {
+  x: ['friendly staff','good result','fast service','easy product','bad result',
+    'unfriendly staff','expensive','better alternative'],
+  y: [150, 120, 140, 160, 90, 100, 80, 50],
+  name: 'Sales',
+  type: 'bar',
+  marker: {color: ['0F9D58', '0F9D58','0F9D58','0F9D58','DB4437',
+    'DB4437','DB4437','DB4437']}
+  };
+
+  var data = [trace1];
+  var layout = {title: "Customer Review Distribution", height: 400,
+             font: {size: 12, family: "Times New Roman"},
+             xaxis: {showgrid: false, showline: true},
+             yaxis: {showgrid: false, showline: true}  };
+
+Plotly.newPlot('cusrev', data, layout);
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+
