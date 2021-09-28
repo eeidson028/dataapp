@@ -4,7 +4,7 @@ Below are descriptions of the various files & directories:<br>
 <br>
 pycache - configuration file for the web app
 <br>
-templates - customer.html, index.html, and financial.html contain the code for the web pages customer/guide, KPI, and finance, respectively<br>
+templates - customer.html, index.html, guide.html, and financial.html contain the code for the web pages customer, KPI, guide, and finance, respectively<br>
 venv - represents the virtual enviroment used when running the web app along with storage for installing files
 <br>app.py - the file that starts the functioning of the web app; this file also dictates various functions for differing pages of the web app <br>
 requirements.txt - necessary requirements to download before running the web app
